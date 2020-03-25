@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TareaProg</string>
+    <string name="welcome_app">Welcome App</string>
+    <string name="password">Password</string>
+    <string name="username">UserName</string>
+    <string name="login">Login</string>
+</resources>
