@@ -11,9 +11,11 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
 
-    private EditText usuarioET;
-    private EditText contraET;
-    private Button loginBut;
+    private EditText nombreUS;
+    private EditText apellidoUS;
+    private EditText emailUS;
+    private EditText phoneUS;
+    private Button agregarBut;
     private  String currentUser;
 
 
@@ -25,23 +27,7 @@ public class MainActivity extends AppCompatActivity {
         init();
 
 
-        loginBut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                currentUser = usuarioET.getText().toString().trim();
-                if (!currentUser.isEmpty()) {
-                    Intent intent = new Intent(MainActivity.this,Home.class);
-                    intent.putExtra("user",currentUser);
-
-                    startActivity(intent);
-                }else {
-                    Toast.makeText(MainActivity.this, "Porfavor ingrese el usuario", Toast.LENGTH_SHORT).show();
-
-                }
-
-            }
-        });
 
     }
 
@@ -49,9 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
 
-        usuarioET = findViewById(R.id.usuarioET);
-        contraET = findViewById(R.id.passwodET);
-        loginBut = findViewById(R.id.loginBut);
+
+        nombreUS = findViewById(R.id.nombreET);
+        apellidoUS = findViewById(R.id.apellidoET);
+        agregarBut = findViewById(R.id.addBut);
+        phoneUS = findViewById(R.id.telefonoET);
+        emailUS = findViewById(R.id.emailET);
+
 
     }
 
